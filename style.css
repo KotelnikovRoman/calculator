@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 10px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+button {
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.calculator {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    background-color: rgb(40, 40, 38);
+    border-radius: 15px;
+}
+
+.calculator__display {
+    color: #1ff;
+    background-color: #233;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.display {
+    background-color: rgb(7, 30, 30);
+}
+
+.display__resultat {
+    padding: 10px;
+    font-size: 70px;
+    text-align: center;
+    background-color: rgb(30, 50, 50);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.display__input {
+    width: 100%;
+    padding: 5px 10px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-weight: bold;
+    text-align: right;
+    color: #1ff;
+    background-color: rgb(7, 30, 30);
+    border: 0;
+    outline: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 20px;
+}
+
+.buttons__left,
+.buttons__right {
+    width: 50%;
+}
+
+.buttons__row {
+    display: flex;
+    width: 100%;
+}
+
+.buttons__left .buttons__item {
+    background-color: rgb(44, 44, 44);
+}
+
+.buttons__right .buttons__row {
+    justify-content: flex-end;
+}
+
+.buttons__item {
+    width: 20%;
+    height: 30px;
+    margin: 2px 2px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px black;
+    border: 0;
+    outline: 0;
+    background-color: rgb(102, 102, 102);
+}
+
+.color1 {
+    background: rgb(149, 56, 26);
+}
+
+.color2 {
+    background-color: #056;
+}
+
+.color3 {
+    background-color: rgb(44, 44, 44);
+}
+
+.buttons__big {
+    width: 41%;
+}
