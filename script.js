@@ -1,6 +1,6 @@
 /** ввод и результат */
 var result = document.getElementById("result");
-var input = document.getElementById("input").value = "";
+var input = document.getElementById("input");
 
 /** числа */
 var button_one = document.getElementById("button_one");
@@ -21,23 +21,57 @@ var button_multiply = document.getElementById("button_multiply");   // *
 var button_divide = document.getElementById("button_divide");   // /
 var button_equal = document.getElementById("button_equal"); // =
 
+
+/** определяем какая кнопка нажата */
+var name = "";
+function name_button(e) {
+    e = e || window.event;
+    el = e.target || e.srcElement;
+    //id кнопки
+    name = el.id;
+    number()
+}
+
 function number() {
-    /** */
+    if(name == "button_zero") {
+        input.value += "0";
+    }
+    else if(name == "button_one") {
+        input.value += "1";
+    }
+    else if(name == "button_two") {
+        input.value += "2";
+    }
+    else if(name == "button_three") {
+        input.value += "3";
+    }
+    else if(name == "button_four") {
+        input.value += "4";
+    }
+    else if(name == "button_five") {
+        input.value += "5";
+    }
+    else if(name == "button_six") {
+        input.value += "6";
+    }
+    else if(name == "button_seven") {
+        input.value += "7";
+    }
+    else if(name == "button_eight") {
+        input.value += "8";
+    }
+    else if(name == "button_nine") {
+        input.value += "9";
+    }
 }
 
 function display() {
+    name = name_button();
     /*
     input = 354.7;
     result.innerHTML = input;
     */
+   alert(name);
 }
 
-/** определяем какая кнопка нажата */
-function name_button(e) {
-    e = e || window.event;
-    var el = e.target || e.srcElement;
-    alert(el.id);
-}
-
-display();
-
+window.onclick = name_button;
