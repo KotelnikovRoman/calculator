@@ -25,7 +25,9 @@ var button_equal = document.getElementById("button_equal"); // =
 /** определяем какая кнопка нажата */
 var name = "";
 function name_button(e) {
+    //получаем событие при клике
     e = e || window.event;
+    //получаем ссылку на объект
     el = e.target || e.srcElement;
     //id кнопки
     name = el.id;
