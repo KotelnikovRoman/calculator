@@ -65,30 +65,30 @@ button {
     border-bottom-right-radius: 10px;
 }
 
-.buttons {
+.btns {
     display: flex;
     margin-top: 20px;
 }
 
-.buttons__left,
-.buttons__right {
+.btns__left,
+.btns__right {
     width: 50%;
 }
 
-.buttons__row {
+.btns__row {
     display: flex;
     width: 100%;
 }
 
-.buttons__left .buttons__item {
+.btns__left .btns__item {
     background-color: rgb(44, 44, 44);
 }
 
-.buttons__right .buttons__row {
+.btns__right .btns__row {
     justify-content: flex-end;
 }
 
-.buttons__item {
+.btns__item {
     width: 20%;
     height: 30px;
     margin: 2px 2px;

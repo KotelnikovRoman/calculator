@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>калькулятор</title>
 </head>
+
 <body>
     <div class="calculator">
         <div class="container">
@@ -18,87 +20,97 @@
         </div>
         <!-- /.container -->
         <div class="container">
-            <div class="calculator__buttons buttons">
-                <div class="buttons__left">
-                    <div class="buttons__row">
-                        <button id="button_name" class="buttons__item">2nd</button>
-                        <button id="button_name" class="buttons__item">(</button>
-                        <button id="button_name" class="buttons__item">)</button>
-                        <button id="button_name" class="buttons__item">%</button>
+            <div class="calculator__btns btns">
+                <div class="btns__left">
+                    <div class="btns__row">
+                        <button id="button_name" class="btns__item">2nd</button>
+                        <button id="button_name" class="btns__item">(</button>
+                        <button id="button_name" class="btns__item">)</button>
+                        <button id="button_name" class="btns__item">%</button>
                     </div>
-                    <div class="buttons__row">
-                        <button id="button_name" class="buttons__item">1/x</button>
-                        <button id="button_name" class="buttons__item">x<sup>2</sup></button>
-                        <button id="button_name" class="buttons__item">x<sup>3</sup></button>
-                        <button id="button_name" class="buttons__item">y<sup>x</sup></button>
+                    <div class="btns__row">
+                        <button id="button_name" class="btns__item">1/x</button>
+                        <button id="button_name" class="btns__item">x<sup>2</sup></button>
+                        <button id="button_name" class="btns__item">x<sup>3</sup></button>
+                        <button id="button_name" class="btns__item">y<sup>x</sup></button>
                     </div>
-                    <div class="buttons__row">
-                        <button id="button_name" class="buttons__item">x!</button>
-                        <button id="button_name" class="buttons__item">-/</button>
-                        <button id="button_name" class="buttons__item"><sup>x</sup>-/y</button>
-                        <button id="button_name" class="buttons__item">log</button>
+                    <div class="btns__row">
+                        <button id="button_name" class="btns__item">x!</button>
+                        <button id="button_name" class="btns__item">-/</button>
+                        <button id="button_name" class="btns__item"><sup>x</sup>-/y</button>
+                        <button id="button_name" class="btns__item">log</button>
                     </div>
-                    <div class="buttons__row">
-                        <button id="button_name" class="buttons__item">sin</button>
-                        <button id="button_name" class="buttons__item">cos</button>
-                        <button id="button_name" class="buttons__item">tan</button>
-                        <button id="button_name" class="buttons__item">ln</button>
+                    <div class="btns__row">
+                        <button id="button_name" class="btns__item">sin</button>
+                        <button id="button_name" class="btns__item">cos</button>
+                        <button id="button_name" class="btns__item">tan</button>
+                        <button id="button_name" class="btns__item">ln</button>
                     </div>
-                    <div class="buttons__row">
-                        <button id="button_name" class="buttons__item">sinh</button>
-                        <button id="button_name" class="buttons__item">cosh</button>
-                        <button id="button_name" class="buttons__item">tanh</button>
-                        <button id="button_name" class="buttons__item">e<sup>x</sup></button>
+                    <div class="btns__row">
+                        <button id="button_name" class="btns__item">sinh</button>
+                        <button id="button_name" class="btns__item">cosh</button>
+                        <button id="button_name" class="btns__item">tanh</button>
+                        <button id="button_name" class="btns__item">e<sup>x</sup></button>
                     </div>
-                    <div class="buttons__row">
-                        <button id="button_name" class="buttons__item">Rad</button>
-                        <button id="button_name" class="buttons__item">&pi;</button>
-                        <button id="button_name" class="buttons__item">EE</button>
-                        <button id="button_name" class="buttons__item">Rand</button>
+                    <div class="btns__row">
+                        <button id="button_name" class="btns__item">Rad</button>
+                        <button id="button_name" class="btns__item">&pi;</button>
+                        <button id="button_name" class="btns__item">EE</button>
+                        <button id="button_name" class="btns__item">Rand</button>
                     </div>
                 </div>
-                <!-- /.buttons__left -->
-                <div class="buttons__right">
-                    <div class="buttons__row">
-                        <button id="button_name" class="buttons__item">ms</button>
-                        <button id="button_name" class="buttons__item">m+</button>
-                        <button id="button_name" class="buttons__item">m-</button>
-                        <button id="button_name" class="buttons__item">mr</button>
+                <!-- /.btns__left -->
+                <div class="btns__right">
+                    <div class="btns__row">
+                        <button id="button_name" class="btns__item">ms</button>
+                        <button id="button_name" class="btns__item">m+</button>
+                        <button id="button_name" class="btns__item">m-</button>
+                        <button id="button_name" class="btns__item">mr</button>
                     </div>
-                    <div class="buttons__row">
-                        <button id="button_name" class="buttons__item color1">C</button>
-                        <button id="button_name" class="buttons__item color2">+/-</button>
-                        <button id="button_divide" class="buttons__item color2">
+                    <div class="btns__row">
+                        <button id="button_name" class="btns__item color1">C</button>
+                        <button id="button_name" class="btns__item color2">+/-</button>
+                        <button id="btn_divide" class="btns__item color2" onclick="operators()">
                             <span class="big">&divide;</span>
                         </button>
-                        <button id="button_multiply" class="buttons__item color2">X</button>
+                        <button id="btn_multiply" class="btns__item color2" onclick="operators()">
+                            X
+                        </button>
                     </div>
-                    <div class="buttons__row">
-                        <button id="button_seven" class="buttons__item" onclick="number()">7</button>
-                        <button id="button_eight" class="buttons__item" onclick="number()">8</button>
-                        <button id="button_nine" class="buttons__item" onclick="number()">9</button>
-                        <button id="button_minus" class="buttons__item color2">-</button>
+                    <div class="btns__row">
+                        <button id="btn_seven" class="btns__item" onclick="number()">7</button>
+                        <button id="btn_eight" class="btns__item" onclick="number()">8</button>
+                        <button id="btn_nine" class="btns__item" onclick="number()">9</button>
+                        <button id="btn_minus" class="btns__item color2" onclick="operators()">
+                            -
+                        </button>
                     </div>
-                    <div class="buttons__row">
-                        <button id="button_four" class="buttons__item" onclick="number()">4</button>
-                        <button id="button_five" class="buttons__item" onclick="number()">5</button>
-                        <button id="button_six" class="buttons__item" onclick="number()">6</button>
-                        <button id="button_plus" class="buttons__item color2">+</button>
+                    <div class="btns__row">
+                        <button id="btn_four" class="btns__item" onclick="number()">4</button>
+                        <button id="btn_five" class="btns__item" onclick="number()">5</button>
+                        <button id="btn_six" class="btns__item" onclick="number()">6</button>
+                        <button id="btn_plus" class="btns__item color2" onclick="operators()">
+                            +
+                        </button>
                     </div>
-                    <div class="buttons__row">
-                        <button id="button_one" class="buttons__item" onclick="number()">1</button>
-                        <button id="button_two" class="buttons__item" onclick="number()">2</button>
-                        <button id="button_three" class="buttons__item" onclick="number()">3</button>
-                        <button id="button_result" class="buttons__item color2">=</button>
+                    <div class="btns__row">
+                        <button id="btn_one" class="btns__item" onclick="number()">1</button>
+                        <button id="btn_two" class="btns__item" onclick="number()">2</button>
+                        <button id="btn_three" class="btns__item" onclick="number()">3</button>
+                        <button id="btn_result" class="btns__item color2" onclick="operators()">
+                            =
+                        </button>
                     </div>
-                    <div class="buttons__row">
-                        <button id="button_zero" class="buttons__item buttons__big" onclick="number()">0</button>
-                        <button id="button_name" class="buttons__item color3 buttons__big">.</button>
+                    <div class="btns__row">
+                        <button id="btn_zero" class="btns__item buttons__big" onclick="number()">0</button>
+                        <button id="btn_tochka" class="btns__item color3 buttons__big">
+                            <span onclick="operators()">.</span>
+                        </button>
                     </div>
                 </div>
-                <!-- /.buttons__right -->
+                <!-- /.btns__right -->
             </div>
-            <!-- /.buttons -->
+            <!-- /.btns -->
         </div>
         <!-- /.container -->
     </div>
@@ -106,4 +118,5 @@
     <button onclick="number()">значение</button>
     <script src="script.js"></script>
 </body>
+
 </html>
