@@ -69,6 +69,12 @@ function operators(e) {
 //сохранение значений
 var example = "";
 
+function clear_input() {
+    example = "";
+    input.value = example;
+    //alert("hello");
+}
+
 //добавление значения в массив
 function answer(x) {
     example += x;
