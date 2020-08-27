@@ -99,6 +99,10 @@ button {
     background-color: rgb(102, 102, 102);
 }
 
+.btns__item img {
+    height: 30px;
+}
+
 .color1 {
     background: rgb(149, 56, 26);
 }
@@ -112,5 +116,5 @@ button {
 }
 
 .buttons__big {
-    width: 41%;
+    width: 27%;
 }

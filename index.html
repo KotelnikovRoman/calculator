@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -13,8 +13,9 @@
     <div class="calculator">
         <div class="container">
             <div class="calculator__display display">
-                <p class="display__resultat" id="result">калькулятор</p>
-                <input type="text" class="display__input" id="input" placeholder="ввод данных">
+                <p class="display__resultat result" id="result">калькулятор</p>
+                <input type="text" class="display__input account" id="input" placeholder="0,00" readonly>
+                <!--<input type="text" class="display__input result" id="input" placeholder="ввод данных" readonly>-->
             </div>
             <!-- /.calculator__display display -->
         </div>
@@ -24,9 +25,9 @@
                 <div class="btns__left">
                     <div class="btns__row">
                         <button id="button_name" class="btns__item">2nd</button>
-                        <button id="button_name" class="btns__item">(</button>
-                        <button id="button_name" class="btns__item">)</button>
-                        <button id="button_name" class="btns__item">%</button>
+                        <button id="button_name" class="btns__item" onclick="input('(')">(</button>
+                        <button id="button_name" class="btns__item" onclick="input(')')">)</button>
+                        <button id="button_name" class="btns__item" onclick="input('%')">%</button>
                     </div>
                     <div class="btns__row">
                         <button id="button_name" class="btns__item">1/x</button>
@@ -63,48 +64,55 @@
                 <div class="btns__right">
                     <div class="btns__row">
                         <button id="button_name" class="btns__item">ms</button>
-                        <button id="button_name" class="btns__item">m+</button>
+                        <button id="button_name" class="btns__item" onclick="memory()">m+</button>
                         <button id="button_name" class="btns__item">m-</button>
                         <button id="button_name" class="btns__item">mr</button>
                     </div>
                     <div class="btns__row">
-                        <button id="button_clear" class="btns__item color1" onclick="clear_input()">C</button>
+                        <button id="button_clear" class="btns__item color1" onclick="reset()">C</button>
                         <button id="button_name" class="btns__item color2">+/-</button>
-                        <button id="btn_divide" class="btns__item color2" onclick="operators()">
-                            <span class="big">&divide;</span>
+                        <!-- result_number-->
+                        <button id="btn_divide" class="btns__item color2" onclick="input('/')">
+                            <span class="big">÷</span>
+                            <!-- += arr_numbers[i];-->
                         </button>
-                        <button id="btn_multiply" class="btns__item color2" onclick="operators()">
+                        <button id="btn_multiply" class="btns__item color2" onclick="input('*')">
                             X
                         </button>
                     </div>
                     <div class="btns__row">
-                        <button id="btn_seven" class="btns__item" onclick="number()">7</button>
-                        <button id="btn_eight" class="btns__item" onclick="number()">8</button>
-                        <button id="btn_nine" class="btns__item" onclick="number()">9</button>
-                        <button id="btn_minus" class="btns__item color2" onclick="operators()">
+                        <button id="btn_seven" class="btns__item" onclick="input('7')">7</button>
+                        <button id="btn_eight" class="btns__item" onclick="input('8')">8</button>
+                        <button id="btn_nine" class="btns__item" onclick="input('9')">9</button>
+                        <button id="btn_minus" class="btns__item color2" onclick="input('-')">
                             -
                         </button>
                     </div>
                     <div class="btns__row">
-                        <button id="btn_four" class="btns__item" onclick="number()">4</button>
-                        <button id="btn_five" class="btns__item" onclick="number()">5</button>
-                        <button id="btn_six" class="btns__item" onclick="number()">6</button>
-                        <button id="btn_plus" class="btns__item color2" onclick="operators()">
+                        <button id="btn_four" class="btns__item" onclick="input('4')">4</button>
+                        <button id="btn_five" class="btns__item" onclick="input('5')">5</button>
+                        <button id="btn_six" class="btns__item" onclick="input('6')">6</button>
+                        <button id="btn_plus" class="btns__item color2" onclick="input('+')">
                             +
                         </button>
                     </div>
                     <div class="btns__row">
-                        <button id="btn_one" class="btns__item" onclick="number()">1</button>
-                        <button id="btn_two" class="btns__item" onclick="number()">2</button>
-                        <button id="btn_three" class="btns__item" onclick="number()">3</button>
-                        <button id="btn_result" class="btns__item color2" onclick="operators()">
+                        <button id="btn_one" class="btns__item" onclick="input('1')">1</button>
+                        <button id="btn_two" class="btns__item" onclick="input('2')">2</button>
+                        <button id="btn_three" class="btns__item" onclick="input('3')">3</button>
+                        <button id="btn_result" class="btns__item color2" onclick="result()">
                             =
                         </button>
                     </div>
                     <div class="btns__row">
-                        <button id="btn_zero" class="btns__item buttons__big" onclick="number()">0</button>
+                        <button id="btn_zero" class="btns__item buttons__big" onclick="input('0')">0</button>
                         <button id="btn_tochka" class="btns__item color3 buttons__big">
-                            <span onclick="operators()">.</span>
+                            <span onclick="input(',')">,</span>
+                        </button>
+                        <button id="btn_tochka" class="btns__item color3 buttons__big">
+                            <span onclick="backspace()">
+                                <img src="img/backspace.png" alt="">
+                            </span>
                         </button>
                     </div>
                 </div>
@@ -115,7 +123,7 @@
         <!-- /.container -->
     </div>
     <!-- /.calculator -->
-    <button onclick="number()">значение</button>
+    <button onclick="input('i')">значение</button>
     <script src="script.js"></script>
 </body>
 
